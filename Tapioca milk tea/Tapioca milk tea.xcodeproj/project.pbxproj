@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18CB2685260F5D6600FC90FC /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB2684260F5D6600FC90FC /* OrderDetail.swift */; };
+		18CB2688260F60B400FC90FC /* OrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB2687260F60B400FC90FC /* OrderRowView.swift */; };
 		53BB726622E1C33C00AA7546 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BB726522E1C33C00AA7546 /* AppDelegate.swift */; };
 		53BB726822E1C33C00AA7546 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BB726722E1C33C00AA7546 /* SceneDelegate.swift */; };
 		53BB726D22E1C33C00AA7546 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BB726C22E1C33C00AA7546 /* ContentView.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18CB2684260F5D6600FC90FC /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
+		18CB2687260F60B400FC90FC /* OrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowView.swift; sourceTree = "<group>"; };
 		53BB726222E1C33C00AA7546 /* Tapioca milk tea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tapioca milk tea.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53BB726522E1C33C00AA7546 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53BB726722E1C33C00AA7546 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				53BB726522E1C33C00AA7546 /* AppDelegate.swift */,
 				53BB726722E1C33C00AA7546 /* SceneDelegate.swift */,
 				53BB726C22E1C33C00AA7546 /* ContentView.swift */,
+				18CB2684260F5D6600FC90FC /* OrderDetail.swift */,
+				18CB2687260F60B400FC90FC /* OrderRowView.swift */,
 				53BB726E22E1C33E00AA7546 /* Assets.xcassets */,
 				53BB727322E1C33E00AA7546 /* LaunchScreen.storyboard */,
 				53BB727622E1C33E00AA7546 /* Info.plist */,
@@ -167,7 +173,9 @@
 				53BB726622E1C33C00AA7546 /* AppDelegate.swift in Sources */,
 				53F05E4522F3228C009E3AA8 /* OrderEntity.swift in Sources */,
 				53BB726D22E1C33C00AA7546 /* ContentView.swift in Sources */,
+				18CB2685260F5D6600FC90FC /* OrderDetail.swift in Sources */,
 				53BB726822E1C33C00AA7546 /* SceneDelegate.swift in Sources */,
+				18CB2688260F60B400FC90FC /* OrderRowView.swift in Sources */,
 				53F05E4722F326FF009E3AA8 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
