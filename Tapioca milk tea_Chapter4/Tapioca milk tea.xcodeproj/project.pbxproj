@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185971832610A90000707620 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185971822610A90000707620 /* OrderView.swift */; };
 		538C05272380DB91006B97C5 /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538C05262380DB91006B97C5 /* OrderDetail.swift */; };
 		538C05292380DE54006B97C5 /* OrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538C05282380DE54006B97C5 /* OrderRowView.swift */; };
 		53BB726622E1C33C00AA7546 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BB726522E1C33C00AA7546 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		185971822610A90000707620 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		538C05262380DB91006B97C5 /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 		538C05282380DE54006B97C5 /* OrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowView.swift; sourceTree = "<group>"; };
 		53BB726222E1C33C00AA7546 /* Tapioca milk tea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tapioca milk tea.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,7 @@
 				53BB726722E1C33C00AA7546 /* SceneDelegate.swift */,
 				53BB726C22E1C33C00AA7546 /* ContentView.swift */,
 				538C05262380DB91006B97C5 /* OrderDetail.swift */,
+				185971822610A90000707620 /* OrderView.swift */,
 				53BB726E22E1C33E00AA7546 /* Assets.xcassets */,
 				53BB727322E1C33E00AA7546 /* LaunchScreen.storyboard */,
 				53BB727622E1C33E00AA7546 /* Info.plist */,
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53BB726622E1C33C00AA7546 /* AppDelegate.swift in Sources */,
+				185971832610A90000707620 /* OrderView.swift in Sources */,
 				53F05E4522F3228C009E3AA8 /* OrderEntity.swift in Sources */,
 				53BB726D22E1C33C00AA7546 /* ContentView.swift in Sources */,
 				538C05272380DB91006B97C5 /* OrderDetail.swift in Sources */,
