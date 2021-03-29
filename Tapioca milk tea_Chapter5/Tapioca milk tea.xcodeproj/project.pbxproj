@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		187828412611F9DE005F8835 /* OrderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187828402611F9DD005F8835 /* OrderHistoryView.swift */; };
+		187828482611FBC0005F8835 /* ShopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187828472611FBC0005F8835 /* ShopRow.swift */; };
+		1878284B2611FE3D005F8835 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1878284A2611FE3D005F8835 /* CategoryRow.swift */; };
+		1885EDE52612007A00D81444 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885EDE42612007A00D81444 /* HomeView.swift */; };
 		538C05272380DB91006B97C5 /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538C05262380DB91006B97C5 /* OrderDetail.swift */; };
 		538C05292380DE54006B97C5 /* OrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538C05282380DE54006B97C5 /* OrderRowView.swift */; };
 		538C052D2380E693006B97C5 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538C052C2380E693006B97C5 /* OrderView.swift */; };
@@ -26,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		187828402611F9DD005F8835 /* OrderHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryView.swift; sourceTree = "<group>"; };
+		187828472611FBC0005F8835 /* ShopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopRow.swift; sourceTree = "<group>"; };
+		1878284A2611FE3D005F8835 /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
+		1885EDE42612007A00D81444 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		538C05262380DB91006B97C5 /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 		538C05282380DE54006B97C5 /* OrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowView.swift; sourceTree = "<group>"; };
 		538C052C2380E693006B97C5 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
@@ -90,6 +98,10 @@
 				53BB726722E1C33C00AA7546 /* SceneDelegate.swift */,
 				53BB726C22E1C33C00AA7546 /* ContentView.swift */,
 				538C05262380DB91006B97C5 /* OrderDetail.swift */,
+				187828402611F9DD005F8835 /* OrderHistoryView.swift */,
+				187828472611FBC0005F8835 /* ShopRow.swift */,
+				1878284A2611FE3D005F8835 /* CategoryRow.swift */,
+				1885EDE42612007A00D81444 /* HomeView.swift */,
 				538C052C2380E693006B97C5 /* OrderView.swift */,
 				53BB726E22E1C33E00AA7546 /* Assets.xcassets */,
 				53BB727322E1C33E00AA7546 /* LaunchScreen.storyboard */,
@@ -196,9 +208,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				53BB726622E1C33C00AA7546 /* AppDelegate.swift in Sources */,
+				1885EDE52612007A00D81444 /* HomeView.swift in Sources */,
 				538C052D2380E693006B97C5 /* OrderView.swift in Sources */,
+				187828482611FBC0005F8835 /* ShopRow.swift in Sources */,
 				53F05E4522F3228C009E3AA8 /* OrderEntity.swift in Sources */,
+				187828412611F9DE005F8835 /* OrderHistoryView.swift in Sources */,
 				53BB726D22E1C33C00AA7546 /* ContentView.swift in Sources */,
+				1878284B2611FE3D005F8835 /* CategoryRow.swift in Sources */,
 				538C05272380DB91006B97C5 /* OrderDetail.swift in Sources */,
 				538C05372380EF65006B97C5 /* Special.swift in Sources */,
 				53BB726822E1C33C00AA7546 /* SceneDelegate.swift in Sources */,
