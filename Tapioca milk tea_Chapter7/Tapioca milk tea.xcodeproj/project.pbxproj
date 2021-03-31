@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1826540D26149D5100CFAE05 /* ShopImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826540C26149D5100CFAE05 /* ShopImage.swift */; };
+		1826541026149ED100CFAE05 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826540F26149ED100CFAE05 /* ShopView.swift */; };
 		538C05272380DB91006B97C5 /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538C05262380DB91006B97C5 /* OrderDetail.swift */; };
 		538C05292380DE54006B97C5 /* OrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538C05282380DE54006B97C5 /* OrderRowView.swift */; };
 		538C052D2380E693006B97C5 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538C052C2380E693006B97C5 /* OrderView.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1826540C26149D5100CFAE05 /* ShopImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopImage.swift; sourceTree = "<group>"; };
+		1826540F26149ED100CFAE05 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		538C05262380DB91006B97C5 /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 		538C05282380DE54006B97C5 /* OrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowView.swift; sourceTree = "<group>"; };
 		538C052C2380E693006B97C5 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				538C052C2380E693006B97C5 /* OrderView.swift */,
 				538C05382380F14E006B97C5 /* OrderHistoryView.swift */,
 				538C053E2380F561006B97C5 /* HomeView.swift */,
+				1826540C26149D5100CFAE05 /* ShopImage.swift */,
+				1826540F26149ED100CFAE05 /* ShopView.swift */,
 				53BB726E22E1C33E00AA7546 /* Assets.xcassets */,
 				53BB727322E1C33E00AA7546 /* LaunchScreen.storyboard */,
 				53BB727622E1C33E00AA7546 /* Info.plist */,
@@ -216,7 +222,9 @@
 				538C053B2380F18F006B97C5 /* ShopRow.swift in Sources */,
 				53F05E4522F3228C009E3AA8 /* OrderEntity.swift in Sources */,
 				538C05392380F14E006B97C5 /* OrderHistoryView.swift in Sources */,
+				1826541026149ED100CFAE05 /* ShopView.swift in Sources */,
 				53BB726D22E1C33C00AA7546 /* ContentView.swift in Sources */,
+				1826540D26149D5100CFAE05 /* ShopImage.swift in Sources */,
 				538C053D2380F280006B97C5 /* CategoryRow.swift in Sources */,
 				538C0541238100B1006B97C5 /* TapiocaTeaView.swift in Sources */,
 				538C05272380DB91006B97C5 /* OrderDetail.swift in Sources */,

@@ -44,6 +44,7 @@ struct OrderDetail: View {
             Text("\(order.date,formatter: dateFormatter)")
                 .font(.caption)
         }
+        .navigationBarTitle("Order detail")
     }
 }
 

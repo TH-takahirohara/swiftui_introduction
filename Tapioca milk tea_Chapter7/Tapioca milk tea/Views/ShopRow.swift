@@ -1,5 +1,24 @@
 import SwiftUI
 
+struct ShopCell: View {
+    var shop: Shop
+    
+    var body: some View {
+        VStack(alignment: .center) {
+            shop.image
+                .renderingMode(.original)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 155, height: 155)
+                .clipShape(Circle())
+            Text(shop.name)
+                .font(.caption)
+                .foregroundColor(.primary)
+        }
+        .padding(.leading, 15)
+    }
+}
+
 struct ShopRow: View {
     var shops: [Shop]
     
@@ -13,19 +32,9 @@ struct ShopRow: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(self.shops) { shop in
-                        VStack(alignment: .center) {
-                            shop.image
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 155, height: 155)
-                                .clipShape(Circle())
-                            
-                            Text(shop.name)
-                                .font(.subheadline)
-                                .foregroundColor(.primary)
-                                .font(.caption)
+                        NavigationLink(destination: ShopView(shop: shop)) {
+                            ShopCell(shop: shop)
                         }
-                        .padding(.leading, 15)
                     }
                 }
             }

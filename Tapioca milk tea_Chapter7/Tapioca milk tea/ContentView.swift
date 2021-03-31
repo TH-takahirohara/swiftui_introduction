@@ -9,6 +9,23 @@ struct ContentView : View {
 
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TabView {
+            HomeView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("HOME")
+                }
+            OrderView()
+                .tabItem {
+                    Image(systemName: "textbox")
+                    Text("ORDER")
+                }
+            OrderHistoryView()
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                    Text("LIST")
+                }
+        }
+        .edgesIgnoringSafeArea(.top)
     }
 }
