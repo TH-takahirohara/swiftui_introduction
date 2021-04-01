@@ -231,6 +231,8 @@ struct TapiocaTeaView: View {
             /// タピオカ
             ForEach(tapiocaArray) {tapioca in
                 TapiocaShape(tapioca: tapioca).fill(Color("tapioca"))
+                    .scaleEffect(CGFloat.random(in: 1.0...1.1))
+                    .animation(.default)
             }
 
             /// ナタデココ
@@ -238,6 +240,12 @@ struct TapiocaTeaView: View {
                 ForEach(nataDeCocoArray) {coco in
                     NataDeCocoShape(coco: coco)
                         .fill(Color("nata_de_coco"))
+                        .rotationEffect(
+                            .degrees(Double.random(in: 0..<180)),
+                            anchor: .init(
+                                x: (coco.pt.x + Coco.size / 2),
+                                y: (coco.pt.y + Coco.size / 2)))
+                        .animation(.default)
                 }
             }
 

@@ -21,6 +21,7 @@ struct ShopImage: View {
             .clipShape(Circle())
             .overlay(
                 Circle().stroke(linear, lineWidth: 13))
+            .shadow(radius: 5, x: 0, y: 5)
     }
 }
 
