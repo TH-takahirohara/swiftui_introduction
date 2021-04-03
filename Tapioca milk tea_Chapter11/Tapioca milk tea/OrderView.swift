@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct OrderView: View {
+    @ObservedObject var keyboard = KeyboardObserver()
+    
     @State private var flavor: Int = 0
     @State private var nataDeCoco = false
     @State private var iceCream: Int = 0
@@ -73,7 +75,11 @@ struct OrderView: View {
                       message: Text("The order was saved successfully."),
                       dismissButton: .default(Text("OK")))
             }
-        }
+        }.onAppear {
+            self.keyboard.startObserve()
+        }.onDisappear {
+            self.keyboard.stopObserve()
+        }.padding(.bottom, keyboard.keyboardHeight)
     }
     
     private func save() {
