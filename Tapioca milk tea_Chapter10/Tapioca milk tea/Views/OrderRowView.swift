@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct OrderRowView: View {
-    var order: OrderEntity
+    @ObservedObject var order: OrderEntity
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
@@ -42,14 +42,14 @@ struct OrderRowView: View {
 }
 
 struct OrderRowView_Previews: PreviewProvider {
+    static var orderStore: OrderStore {
+        let orderStore = OrderStore()
+        orderStore.orders.append(OrderEntity())
+        return orderStore
+    }
+    
     static var previews: some View {
-        Group {
-            OrderRowView(order: orderStore.orders[0])
-            OrderRowView(order: orderStore.orders[1])
-            OrderRowView(order: orderStore.orders[2])
-        }
-        .previewDevice("iPhone SE")
-        .previewLayout(.fixed(width: 400,
-                              height: 80))
+        OrderRowView(order: orderStore.orders[0])
+            .previewLayout(.fixed(width: 400, height: 80))
     }
 }

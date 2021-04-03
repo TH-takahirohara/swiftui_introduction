@@ -7,6 +7,8 @@ struct OrderView: View {
     @State private var quantity = 1
     @State private var other = ""
     
+    @EnvironmentObject var orderStore: OrderStore
+    
     @State private var toSave = false
     @State private var isSaved = false
     
@@ -75,6 +77,17 @@ struct OrderView: View {
     }
     
     private func save() {
+        orderStore.orders.append(
+            OrderEntity(id: UUID().uuidString,
+                        flavor: flavor,
+                        iceCream: iceCream,
+                        nataDeCoco: nataDeCoco,
+                        other: other,
+                        date: Date(),
+                        quantity: quantity,
+                        favorite: false)
+        )
+        
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             self.isSaved = true
             self.clear()

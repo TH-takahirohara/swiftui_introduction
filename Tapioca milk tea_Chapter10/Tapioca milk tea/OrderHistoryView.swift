@@ -2,6 +2,9 @@ import SwiftUI
 
 struct OrderHistoryView: View {
     @State var showFavoritesOnly = false
+    @State var showDeleteActionSheet = false
+    @EnvironmentObject var orderStore: OrderStore
+    
     var body: some View {
         NavigationView {
             List {
@@ -22,12 +25,38 @@ struct OrderHistoryView: View {
                 }
             }
             .navigationBarTitle("Order list")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.showDeleteActionSheet = true
+                }) {
+                    Text("Favorites")
+                }.actionSheet(isPresented: $showDeleteActionSheet) {
+                    ActionSheet(
+                        title: Text("Message"),
+                        message: Text("Make All Favorites"),
+                        buttons: [
+                            .destructive(Text("Favorites")) {
+                                self.orderStore.orders.forEach {
+                                    $0.favorite = true
+                                }
+                            },
+                            .cancel(Text("Cance")),
+                        ])
+                }
+            )
         }
     }
 }
 
 struct OrderHistoryView_Previews: PreviewProvider {
+    static var orderStore: OrderStore {
+        let orderStore = OrderStore()
+        orderStore.orders.append(OrderEntity())
+        return orderStore
+    }
+    
     static var previews: some View {
         OrderHistoryView()
+            .environmentObject(orderStore)
     }
 }
