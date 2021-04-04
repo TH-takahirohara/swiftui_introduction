@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1804B9032619E7910092E47E /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804B9022619E7910092E47E /* PageView.swift */; };
+		1804B9062619E9F70092E47E /* TextOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804B9052619E9F70092E47E /* TextOverlay.swift */; };
+		1804B9092619EB4B0092E47E /* SpecialCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804B9082619EB4B0092E47E /* SpecialCard.swift */; };
+		1804B90C2619EDED0092E47E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804B90B2619EDED0092E47E /* MapView.swift */; };
 		538C05272380DB91006B97C5 /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538C05262380DB91006B97C5 /* OrderDetail.swift */; };
 		538C05292380DE54006B97C5 /* OrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538C05282380DE54006B97C5 /* OrderRowView.swift */; };
 		538C052D2380E693006B97C5 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538C052C2380E693006B97C5 /* OrderView.swift */; };
@@ -36,6 +40,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1804B9022619E7910092E47E /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		1804B9052619E9F70092E47E /* TextOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextOverlay.swift; sourceTree = "<group>"; };
+		1804B9082619EB4B0092E47E /* SpecialCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCard.swift; sourceTree = "<group>"; };
+		1804B90B2619EDED0092E47E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		538C05262380DB91006B97C5 /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 		538C05282380DE54006B97C5 /* OrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowView.swift; sourceTree = "<group>"; };
 		538C052C2380E693006B97C5 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
@@ -128,6 +136,10 @@
 				538C052C2380E693006B97C5 /* OrderView.swift */,
 				538C05382380F14E006B97C5 /* OrderHistoryView.swift */,
 				538C053E2380F561006B97C5 /* HomeView.swift */,
+				1804B90B2619EDED0092E47E /* MapView.swift */,
+				1804B9022619E7910092E47E /* PageView.swift */,
+				1804B9052619E9F70092E47E /* TextOverlay.swift */,
+				1804B9082619EB4B0092E47E /* SpecialCard.swift */,
 				538C054423810CD5006B97C5 /* ShopView.swift */,
 				53BB726E22E1C33E00AA7546 /* Assets.xcassets */,
 				53BB727322E1C33E00AA7546 /* LaunchScreen.storyboard */,
@@ -234,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53BB726622E1C33C00AA7546 /* AppDelegate.swift in Sources */,
+				1804B90C2619EDED0092E47E /* MapView.swift in Sources */,
 				538C053F2380F561006B97C5 /* HomeView.swift in Sources */,
 				538C052D2380E693006B97C5 /* OrderView.swift in Sources */,
 				538C053B2380F18F006B97C5 /* ShopRow.swift in Sources */,
@@ -242,11 +255,14 @@
 				538C054523810CD5006B97C5 /* ShopView.swift in Sources */,
 				53BB726D22E1C33C00AA7546 /* ContentView.swift in Sources */,
 				538C054323810AD6006B97C5 /* ShopImage.swift in Sources */,
+				1804B9092619EB4B0092E47E /* SpecialCard.swift in Sources */,
 				538C053D2380F280006B97C5 /* CategoryRow.swift in Sources */,
 				538C054B23814206006B97C5 /* KeyboardObserver.swift in Sources */,
 				538C054F23816205006B97C5 /* PageViewController.swift in Sources */,
 				538C0541238100B1006B97C5 /* TapiocaTeaView.swift in Sources */,
+				1804B9032619E7910092E47E /* PageView.swift in Sources */,
 				538C05272380DB91006B97C5 /* OrderDetail.swift in Sources */,
+				1804B9062619E9F70092E47E /* TextOverlay.swift in Sources */,
 				538C05372380EF65006B97C5 /* Special.swift in Sources */,
 				53BB726822E1C33C00AA7546 /* SceneDelegate.swift in Sources */,
 				538C05342380EF65006B97C5 /* Shop.swift in Sources */,
