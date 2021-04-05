@@ -1,9 +1,5 @@
 import Foundation
 
-class OrderStore: ObservableObject {
-    @Published var orders: [OrderEntityOLD] = []
-}
-
 struct DataStore {
     let specials: [Special] = load("special.json")
     let shops:[Shop] = load("shop.json")

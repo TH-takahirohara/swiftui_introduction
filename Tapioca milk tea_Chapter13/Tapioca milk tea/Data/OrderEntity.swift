@@ -30,3 +30,45 @@ var iceCreamArray = ["None",
                      "Vanilla",
                      "Tea",
                      "Matcha"]
+
+extension OrderEntity {
+    static func create(in managedObjectContext: NSManagedObjectContext,
+                       flavor: Int = 0,
+                       nataDeCoco: Bool = false,
+                       iceCream: Int = 0,
+                       quantity: Int = 1,
+                       other: String = "",
+                       date: Date = Date(),
+                       favorite: Bool = false)
+    {
+        let newOrder = self.init(context: managedObjectContext)
+        newOrder.flavor = Int16(flavor)
+        newOrder.nataDeCoco = nataDeCoco
+        newOrder.iceCream = Int16(iceCream)
+        newOrder.quantity = Int16(quantity)
+        newOrder.other = other
+        newOrder.id = UUID().uuidString
+        newOrder.date = date
+        newOrder.favorite = favorite
+        do {
+            try managedObjectContext.save()
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+    }
+    
+    public var flavorName: String {
+        Flavor(rawValue: self.flavor)!.name
+    }
+    
+    public var iceCreamName: String {
+        IceCream(rawValue: self.iceCream)!.name
+    }
+    
+    override public func didChangeValue(forKey key: String) {
+        super.didChangeValue(forKey: key)
+        objectWillChange.send()
+    }
+}
+

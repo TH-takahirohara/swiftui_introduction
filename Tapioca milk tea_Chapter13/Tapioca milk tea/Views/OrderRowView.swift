@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct OrderRowView: View {
-    @ObservedObject var order: OrderEntityOLD
+    @ObservedObject var order: OrderEntity
+    
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
@@ -26,7 +27,7 @@ struct OrderRowView: View {
                         Text(order.iceCreamName)
                     }
                     Spacer()
-                    Text(self.dateFormatter.string(from: order.date))
+                    Text(self.dateFormatter.string(from: order.date!))
                         .font(.caption)
                 }
             }
@@ -42,13 +43,20 @@ struct OrderRowView: View {
 }
 
 struct OrderRowView_Previews: PreviewProvider {
-    static var orderStore: OrderStore {
-        let orderStore = OrderStore()
-        orderStore.orders.append(OrderEntityOLD())
-        return orderStore
-    }
+    
     static var previews: some View {
-        OrderRowView(order: orderStore.orders[0])
+        let context = (UIApplication.shared.delegate as! AppDelegate)
+            .persistentContainer.viewContext
+        let newOrder = OrderEntity(context: context)
+        newOrder.flavor = Int16(1)
+        newOrder.nataDeCoco = true
+        newOrder.iceCream = Int16(2)
+        newOrder.quantity = Int16(10)
+        newOrder.other = ""
+        newOrder.id = UUID().uuidString
+        newOrder.date = Date()
+        
+        return OrderRowView(order: newOrder)
             .previewLayout(.fixed(width: 400,
                                   height: 80))
     }

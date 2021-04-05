@@ -12,7 +12,7 @@ struct OrderView: View {
     @State private var toSave = false
     @State private var isSaved = false
     
-    @EnvironmentObject var orderStore: OrderStore
+    @Environment(\.managedObjectContext) var viewContext
     
     var body: some View {
         ScrollView {
@@ -83,16 +83,15 @@ struct OrderView: View {
     }
     
     private func save() {
-        orderStore.orders.append(
-            OrderEntityOLD(id: UUID().uuidString,
-                        flavor: flavor,
-                        iceCream: iceCream,
-                        nataDeCoco: nataDeCoco,
-                        other: other,
-                        date: Date(),
-                        quantity: quantity,
-                        favorite: false)
-        )
+        OrderEntity.create(in: viewContext,
+                           flavor: flavor,
+                           nataDeCoco: nataDeCoco,
+                           iceCream: iceCream,
+                           quantity: quantity,
+                           other: other,
+                           date: Date(),
+                           favorite: false)
+        
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             self.isSaved = true
             self.clear()

@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             = (UIApplication.shared.delegate as! AppDelegate)
                 .persistentContainer.viewContext
         let contentView
-            = ContentView().environmentObject(OrderStore())
+            = ContentView()
                 .environment(\.managedObjectContext,
                              managedObjectContext)
                 

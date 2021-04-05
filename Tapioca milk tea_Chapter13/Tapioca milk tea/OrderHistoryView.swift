@@ -3,7 +3,13 @@ import SwiftUI
 struct OrderHistoryView: View {
     @State var showFavoritesOnly = false
     @State var showDeleteActionSheet = false
-    @EnvironmentObject var orderStore: OrderStore
+    
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \OrderEntity.date,
+                                           ascending: false)],
+        animation: .default
+    )
+    var orders: FetchedResults<OrderEntity>
 
     var body: some View {
         NavigationView {
@@ -16,7 +22,7 @@ struct OrderHistoryView: View {
                                     bottom: 0,
                                     trailing: 20))
                 
-                ForEach(orderStore.orders) { order in
+                ForEach(orders) { order in
                     if !self.showFavoritesOnly || order.favorite {
                         NavigationLink(
                             destination: OrderDetail(order: order)
@@ -37,7 +43,7 @@ struct OrderHistoryView: View {
                     message: Text("Make All Favorites"),
                     buttons: [
                         .destructive(Text("Favorites")){
-                            self.orderStore.orders.forEach {
+                            self.orders.forEach {
                                 $0.favorite = true
                             }
                         },
@@ -50,14 +56,12 @@ struct OrderHistoryView: View {
 }
 
 struct OrderHistoryView_Previews: PreviewProvider {
-    static var orderStore: OrderStore {
-        let orderStore = OrderStore()
-        orderStore.orders.append(OrderEntityOLD())
-        return orderStore
-    }
-
+    
     static var previews: some View {
-        OrderHistoryView()
-            .environmentObject(orderStore)
+        let context = (UIApplication.shared.delegate as! AppDelegate)
+            .persistentContainer.viewContext
+        
+        return OrderHistoryView()
+            .environment(\.managedObjectContext, context)
     }
 }

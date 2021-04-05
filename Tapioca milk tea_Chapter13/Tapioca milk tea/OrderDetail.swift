@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct OrderDetail: View {
-    @ObservedObject var order: OrderEntityOLD
+    @ObservedObject var order: OrderEntity
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
@@ -45,9 +45,9 @@ struct OrderDetail: View {
             if order.iceCream != 0 {
                 Text(order.iceCreamName)
             }
-            Text(order.other)
+            Text(order.other!)
 
-            Text("\(order.date,formatter: dateFormatter)")
+            Text("\(order.date!,formatter: dateFormatter)")
                 .font(.caption)
         }
         .navigationBarTitle("Order detail")
@@ -55,13 +55,18 @@ struct OrderDetail: View {
 }
 
 struct OrderDetail_Previews: PreviewProvider {
-    static var orderStore: OrderStore {
-        let orderStore = OrderStore()
-        orderStore.orders.append(OrderEntityOLD())
-        return orderStore
-    }
 
     static var previews: some View {
-        OrderDetail(order: orderStore.orders[0])
+        let context = (UIApplication.shared.delegate as! AppDelegate)
+            .persistentContainer.viewContext
+        let newOrder = OrderEntity(context: context)
+        newOrder.flavor = Int16(1)
+        newOrder.nataDeCoco = true
+        newOrder.iceCream = Int16(2)
+        newOrder.quantity = Int16(10)
+        newOrder.other = ""
+        newOrder.id = UUID().uuidString
+        newOrder.date = Date()
+        return OrderDetail(order: newOrder)
     }
 }
