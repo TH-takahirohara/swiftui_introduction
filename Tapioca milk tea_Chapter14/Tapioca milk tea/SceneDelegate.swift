@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let contentView
             = ContentView().environment(\.managedObjectContext,
                              managedObjectContext)
+            .environment(\.locale, Locale(identifier: "ja_JP"))
                 
 
         // Use a UIHostingController as window root view controller.

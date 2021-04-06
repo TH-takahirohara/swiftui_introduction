@@ -28,7 +28,7 @@ struct OrderView: View {
                     Picker(selection: $flavor,
                            label: Text("Select flavor")) {
                         ForEach(0 ..< flavorArray.count) {
-                            Text(flavorArray[$0])
+                            Text(LocalizedStringKey(flavorArray[$0]))
                         }
                     }.labelsHidden()
                     .frame(minWidth: 250)
@@ -42,12 +42,12 @@ struct OrderView: View {
                 Picker(selection: $iceCream,
                        label: Text("Ice cream topping")) {
                     ForEach(0 ..< iceCreamArray.count) {
-                        Text(iceCreamArray[$0])
+                        Text(LocalizedStringKey(iceCreamArray[$0]))
                     }
                 }.pickerStyle(SegmentedPickerStyle())
                 
                 Stepper(value: $quantity ,in: 1...10) {
-                    Text("Quantity : \(quantity)")
+                    Text("Quantity : ") + Text("\(quantity)")
                 }
                 TextField("Other request", text: $other)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -110,5 +110,6 @@ struct OrderView: View {
 struct OrderView_Previews: PreviewProvider {
     static var previews: some View {
         OrderView()
+            .environment(\.locale, Locale(identifier: "ja_JP"))
     }
 }

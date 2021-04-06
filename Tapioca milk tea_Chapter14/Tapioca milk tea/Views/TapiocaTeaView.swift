@@ -215,43 +215,48 @@ struct TapiocaTeaView: View {
             startPoint: .leading,
             endPoint: .trailing
         )
+        
+        return GeometryReader { geometry in
+            return ZStack{
+                /// ストロー
+                StrawShape().foregroundColor(.yellow)
+                
+                /// アイスクリーム
+                if self.iceCream != 0 {
+                    IceCreamShape().fill(iceGradient)
+                }
 
-        return ZStack{
-            /// ストロー
-            StrawShape().foregroundColor(.yellow)
-            
-            /// アイスクリーム
-            if self.iceCream != 0 {
-                IceCreamShape().fill(iceGradient)
-            }
+                /// ティー
+                TeaShape().fill(teaGradient)
 
-            /// ティー
-            TeaShape().fill(teaGradient)
-
-            /// タピオカ
-            ForEach(tapiocaArray) {tapioca in
-                TapiocaShape(tapioca: tapioca)
-                    .fill(Color("tapioca"))
-                    .scaleEffect(CGFloat.random(in: 1.0...1.1))
-                    .animation(.default)
-            }
-
-            /// ナタデココ
-            if self.nataDeCoco {
-                ForEach(nataDeCocoArray) {coco in
-                    NataDeCocoShape(coco: coco)
-                        .fill(Color("nata_de_coco"))
-                        .rotationEffect(
-                            .degrees(Double.random(in: 0..<180)),
-                            anchor: .init(
-                                x: (coco.pt.x + Coco.size / 2),
-                                y: (coco.pt.y + Coco.size / 2)))
+                /// タピオカ
+                ForEach(tapiocaArray) {tapioca in
+                    TapiocaShape(tapioca: tapioca)
+                        .fill(Color("tapioca"))
+                        .scaleEffect(CGFloat.random(in: 1.0...1.1))
                         .animation(.default)
                 }
-            }
 
-            /// グラス
-            GlassShape().foregroundColor(Color("glass"))
+                /// ナタデココ
+                if self.nataDeCoco {
+                    ForEach(nataDeCocoArray) {coco in
+                        NataDeCocoShape(coco: coco)
+                            .fill(Color("nata_de_coco"))
+                            .rotationEffect(
+                                .degrees(Double.random(in: 0..<180)),
+                                anchor: .init(
+                                    x: (coco.pt.x + Coco.size / 2),
+                                    y: (coco.pt.y + Coco.size / 2)))
+                            .animation(.default)
+                    }
+                }
+
+                /// グラス
+                GlassShape().foregroundColor(Color("glass"))
+            }.frame(width: min(geometry.size.width,
+                               geometry.size.height),
+                    height: min(geometry.size.width,
+                                geometry.size.height))
         }
     }
 }

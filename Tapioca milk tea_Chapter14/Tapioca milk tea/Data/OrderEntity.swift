@@ -74,5 +74,3 @@ extension OrderEntity {
         objectWillChange.send()
     }
 }
-
-extension OrderEntity: Identifiable{ }
